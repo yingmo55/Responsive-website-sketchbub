@@ -1,0 +1,165 @@
+/*Reset the CSS*/
+* {
+    margin: 0;
+    padding: 0
+}
+
+h2 {
+    font-size: 36px;
+}
+
+html {
+    font-size: 16px;
+}
+
+h2 {
+    margin: 24px;
+    text-align: center;
+}
+
+header {
+    padding: 12px 24px;
+    display: flex;
+    justify-content: space-between;
+    height: 5vh;
+}
+
+header > nav {
+    align-self: center;
+}
+
+body {
+    display: grid;
+
+}
+
+.hero {
+    background: url(../img/elena-mozhvilo-header.jpg) no-repeat center;
+    height: 50vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      ". . . . . ."
+      ". . . next-event next-event ."
+      "button button. next-event next-event  ."
+      ". . . . . ."; 
+}
+
+.next-event {
+    grid-area: next-event;
+    background-color: white;
+}
+
+#join-here {
+    grid-area: button;
+    justify-self: center;
+    align-self: end;
+    height: 50%;
+    width: 80%;
+}
+
+/*Overview*/
+.introduction-sections {
+    padding: 16px 24px;
+    margin: 24px;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    flex-wrap: wrap;
+    border-bottom: 1px grey double;
+}
+
+.intro-section {
+    text-align: center;
+    max-width: 40%;
+    margin: 24px 0;
+}
+
+.brief-intro {
+    flex-grow: 6;
+}
+
+.activity {
+    flex-grow: 4;
+}
+
+/* showcase */
+
+.showcase {
+    margin: 24px;
+    
+}
+
+.showcase > p {
+    text-align: center;
+    margin: 24px 0;
+}
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 5%;
+}
+
+
+figure.sample-work > img {
+    object-fit: cover;
+    width: 30vh;
+    height: 30vh;
+}
+
+footer {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    border-top: 1px grey double;
+}
+
+
+/* smaller screen*/
+@media screen and (max-width: 1024px) {
+    .hero {
+        grid-template-columns: repeat(4, 1fr); 
+        grid-template-rows: repeat(6, 1fr); 
+        gap: 0px 0px; 
+        grid-template-areas: 
+          ". . . ."
+          ". next-event next-event ."
+          ". next-event next-event ."
+          ". . . ."
+          ". button button ."
+          ". . . ."; 
+    }
+
+}
+
+@media screen and (min-resolution: 200dpi){
+    .hero {
+        height: 30vh;
+        grid-template-columns: repeat(4, 1fr); 
+        grid-template-rows: repeat(6, 1fr); 
+        gap: 0px 0px; 
+        grid-template-areas: 
+          ". . . ."
+          ". next-event next-event ."
+          ". next-event next-event ."
+          ". . . ."
+          ". button button ."
+          ". . . ."; 
+    }
+
+    .introduction-sections {
+        padding: 16px 24px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .introduction-sections {
+        flex-direction: column;
+    }
+
+}
