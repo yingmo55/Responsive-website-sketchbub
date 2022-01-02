@@ -4,15 +4,21 @@
     padding: 0
 }
 
-h2 {
-    font-size: 36px;
-}
-
 html {
     font-size: 16px;
 }
 
+h2, h3, h4, h5, h6 {
+    font-family: 'Ruda', sans-serif;
+}
+
+p, a {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400;
+}
+
 h2 {
+    font-size: 48px;
     margin: 24px;
     text-align: center;
 }
@@ -151,6 +157,10 @@ footer {
           ". . . ."; 
     }
 
+    h2 {
+        font-size: 4em;
+    }
+
     .introduction-sections {
         padding: 16px 24px;
         display: flex;
@@ -160,6 +170,10 @@ footer {
     
     .introduction-sections {
         flex-direction: column;
+    }
+
+    .intro-section {
+        max-width: 100%;
     }
 
 }
