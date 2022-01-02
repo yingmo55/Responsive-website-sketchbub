@@ -8,37 +8,66 @@ html {
     font-size: 16px;
 }
 
+button {
+    border: none;
+}
+
+/* font and font size */
+
+h1 {
+    font-family: 'Fredericka the Great', cursive;
+    color: royalblue;
+}
+
 h2, h3, h4, h5, h6 {
     font-family: 'Ruda', sans-serif;
 }
 
+h3 {
+    font-size: 36px;
+}
+
 p, a {
+    font-size: 20px;
     font-family: 'Roboto Slab', serif;
     font-weight: 400;
 }
 
 h2 {
     font-size: 48px;
-    margin: 24px;
+    margin: 36px 0 0;
     text-align: center;
 }
 
+/*Header & Nav Bar*/
+
 header {
-    padding: 12px 24px;
+    padding: 12px 36px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     height: 5vh;
 }
 
 header > nav {
     align-self: center;
+    height: 100%;
 }
 
-body {
-    display: grid;
-
+nav > button{
+    padding: 10px;
+    background-color: white;
 }
 
+nav > button:hover {
+    background-color: lightgray;
+}
+
+nav > button:active {
+    background-color: grey;
+}
+
+/*hero image*/
 .hero {
     background: url(../img/elena-mozhvilo-header.jpg) no-repeat center;
     height: 50vh;
@@ -48,28 +77,66 @@ body {
     gap: 0px 0px; 
     grid-template-areas: 
       ". . . . . ."
-      ". . . next-event next-event ."
-      "button button. next-event next-event  ."
-      ". . . . . ."; 
+      "slogan slogan slogan next-event next-event ."
+      "button button . next-event next-event  ."
+      "button button . . . ."; 
 }
 
 .next-event {
     grid-area: next-event;
     background-color: white;
+    text-align: center;
+    padding: 24px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.slogan {
+    margin-right: 20px;
+    color: white;
+    grid-area: slogan;
+    justify-self: center;
+    align-self: end;
+    margin: 24px 0;
+}
+
+.slogan > p{
+    font-size: 2.5em;
+}
+
+.next-event > p {
+    margin: 24px;
+    font-size: 2em;
+    font-weight: 600;
 }
 
 #join-here {
     grid-area: button;
-    justify-self: center;
-    align-self: end;
-    height: 50%;
+    justify-self: end;
+    align-self: center;
+    height: 30%;
     width: 80%;
+    font-size: 1.5em;
+    font-weight: 400;
+    background-color: #0070C5;
+    color: snow;
+}
+
+#join-here:hover {
+    background-color: darkslateblue;
+}
+
+#join-here:active {
+    background-color: white;
+    color: gray;
 }
 
 /*Overview*/
 .introduction-sections {
     padding: 16px 24px;
-    margin: 24px;
+    margin: 0 24px 24px;
     display: flex;
     justify-content: space-around;
     align-content: center;
@@ -79,7 +146,7 @@ body {
 
 .intro-section {
     text-align: center;
-    max-width: 40%;
+    max-width: 50vh;
     margin: 24px 0;
 }
 
@@ -99,6 +166,7 @@ body {
 }
 
 .showcase > p {
+    font-size: 2em;
     text-align: center;
     margin: 24px 0;
 }
@@ -113,8 +181,9 @@ body {
 
 figure.sample-work > img {
     object-fit: cover;
-    width: 30vh;
-    height: 30vh;
+    width: 40vh;
+    height: 40vh;
+    margin: 10px;
 }
 
 footer {
@@ -133,16 +202,66 @@ footer {
         gap: 0px 0px; 
         grid-template-areas: 
           ". . . ."
-          ". next-event next-event ."
-          ". next-event next-event ."
+          "next-event next-event next-event next-event"
+          "next-event next-event next-event next-event"
           ". . . ."
-          ". button button ."
+          "slogan slogan slogan slogan"
+          "button button button button"
           ". . . ."; 
+          justify-items: center;
+    }
+
+    .next-event {
+        width: 80%;
+        height: 100%;
+    }
+
+    #join-here {
+        justify-self: center;
+        width: 75%;
+        height: 6vh;
+        margin-bottom: 20px;
     }
 
 }
 
+@media screen and (max-width: 600px) {
+    nav {
+        display: none;
+    }
+
+    .next-event {
+        background-color: white;
+        text-align: center;
+        padding: 24px 0;
+        display: flex;
+    }
+
+    .slogan {
+        color: white;
+        grid-area: slogan;
+        justify-self: center;
+        align-self: end;
+        margin: 24px 0;
+    }
+
+    .slogan > p {
+        font-size: 2em;
+        text-align: center;
+    }
+
+    #start-here {
+        padding: 10px;
+    }
+}
+
 @media screen and (min-resolution: 200dpi){
+    nav {
+        display: none;
+    }
+    h1{
+        font-size: 4em;
+    }
     .hero {
         height: 30vh;
         grid-template-columns: repeat(4, 1fr); 
@@ -150,15 +269,15 @@ footer {
         gap: 0px 0px; 
         grid-template-areas: 
           ". . . ."
-          ". next-event next-event ."
-          ". next-event next-event ."
-          ". . . ."
+          "next-event next-event next-event next-event"
+          "next-event next-event next-event next-event"
+          "slogan slogan slogan slogan"
           ". button button ."
-          ". . . ."; 
+          ". button button .";
     }
 
     h2 {
-        font-size: 4em;
+        font-size: 3em;
     }
 
     .introduction-sections {
@@ -173,7 +292,16 @@ footer {
     }
 
     .intro-section {
-        max-width: 100%;
+        max-width: 90%;
+    }
+    
+    .next-event {
+        width: 70%;
+        height: 80%;
     }
 
+    #join-here {
+        width: 100%;
+        height: 4vh;
+    }
 }
