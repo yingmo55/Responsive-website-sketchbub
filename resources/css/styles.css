@@ -70,7 +70,7 @@ nav > button:active {
 /*hero image*/
 .hero {
     background: url(../img/elena-mozhvilo-header.jpg) no-repeat center;
-    height: 50vh;
+    height: 65vh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; 
     grid-template-rows: 1fr 1fr 1fr 1fr; 
@@ -136,7 +136,8 @@ nav > button:active {
 /*Overview*/
 .introduction-sections {
     padding: 16px 24px;
-    margin: 0 24px 24px;
+    margin: 24px 24px;
+    height: 25vh;
     display: flex;
     justify-content: space-around;
     align-content: center;
