@@ -78,8 +78,8 @@ nav > button:active {
     grid-template-areas: 
       ". . . . . ."
       "slogan slogan slogan next-event next-event ."
-      "button button . next-event next-event  ."
-      "button button . . . ."; 
+      "button button button next-event next-event  ."
+      "button button button . . ."; 
 }
 
 .next-event {
@@ -114,10 +114,10 @@ nav > button:active {
 
 #join-here {
     grid-area: button;
-    justify-self: end;
+    justify-self: center;
     align-self: center;
     height: 30%;
-    width: 80%;
+    width: 50%;
     font-size: 1.5em;
     font-weight: 400;
     background-color: #0070C5;
@@ -224,7 +224,7 @@ footer {
 
     #join-here {
         justify-self: center;
-        width: 75%;
+        width: 60%;
         height: 6vh;
         margin-bottom: 20px;
     }
@@ -261,7 +261,7 @@ footer {
     }
 }
 
-@media screen and (min-resolution: 200dpi){
+@media screen and (max-aspect-ratio: 19.5 / 9){
     nav {
         display: none;
     }
