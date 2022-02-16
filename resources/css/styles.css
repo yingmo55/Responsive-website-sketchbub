@@ -327,6 +327,15 @@ footer {
         font-size: 3em;
     }
 
+    h3{
+        font-size: 2.5em;
+    }
+
+    p {
+        font-size: 2em;
+
+    }
+
     .introduction-sections {
         padding: 24px;
         display: flex;
