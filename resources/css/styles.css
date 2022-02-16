@@ -210,10 +210,9 @@ footer {
           ". . . ."
           "next-event next-event next-event next-event"
           "next-event next-event next-event next-event"
-          ". . . ."
           "slogan slogan slogan slogan"
           "button button button button"
-          ". . . ."; 
+          "button button button button"; 
           justify-items: center;
     }
 
@@ -224,6 +223,7 @@ footer {
 
     #join-here {
         justify-self: center;
+        align-self: center;
         width: 60%;
         height: 6vh;
         margin-bottom: 20px;
