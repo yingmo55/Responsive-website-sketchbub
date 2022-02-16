@@ -77,6 +77,8 @@ nav a:active {
 #mobile-nav {
     display: none;
     background: url('../icons/bars.svg') no-repeat;
+    height: 80px;
+    width: 80px;
 }
 
 /*hero image*/
@@ -244,8 +246,12 @@ footer {
 }
 
 @media screen and (max-width: 600px) {
-    nav {
+    #navigation {
         display: none;
+    }
+
+    #mobile-nav {
+        display: block;
     }
 
     .next-event {
@@ -274,21 +280,34 @@ footer {
 }
 
 @media screen and (max-aspect-ratio:  7 / 10){
-    nav > ul li {
+    #navigation {
         display: none;
+        flex-flow: column wrap;
     }
+
+    #navigation {
+        position: fixed;
+        top: calc(12px + 5vh);
+        left: 0;
+        width: 100vw;
+        flex-flow: column wrap;
+    }
+
+    #navigation a {
+        font-size: 2.5em;
+        width: 100%;
+    }
+
     nav {
         display: flex;
         align-items: center;
     }
     #mobile-nav {
         display: block;
-        height: 60px;
-        width: 60px;
     }
 
     h1{
-        font-size: 3em;
+        font-size: 4em;
     }
     .hero {
         height: 60vh;
