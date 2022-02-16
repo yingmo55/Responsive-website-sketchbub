@@ -52,6 +52,7 @@ header {
 header > nav {
     align-self: center;
     height: 100%;
+    display: inline-flex;
 }
 
 nav > ul li{
@@ -71,6 +72,11 @@ nav a:hover {
 
 nav a:active {
     background-color: grey;
+}
+
+#mobile-nav {
+    display: none;
+    background: url('../icons/bars.svg') no-repeat;
 }
 
 /*hero image*/
@@ -267,25 +273,35 @@ footer {
     }
 }
 
-@media screen and (max-aspect-ratio: 19.5 / 9){
-    nav {
+@media screen and (max-aspect-ratio:  7 / 10){
+    nav > ul li {
         display: none;
     }
+    nav {
+        display: flex;
+        align-items: center;
+    }
+    #mobile-nav {
+        display: block;
+        height: 60px;
+        width: 60px;
+    }
+
     h1{
-        font-size: 4em;
+        font-size: 3em;
     }
     .hero {
-        height: 30vh;
+        height: 60vh;
         grid-template-columns: repeat(4, 1fr); 
         grid-template-rows: repeat(6, 1fr); 
         gap: 0px 0px; 
         grid-template-areas: 
-          ". . . ."
+          "next-event next-event next-event next-event"
           "next-event next-event next-event next-event"
           "next-event next-event next-event next-event"
           "slogan slogan slogan slogan"
-          ". button button ."
-          ". button button .";
+          "button button button button"
+          "button button button button";
     }
 
     h2 {
@@ -308,12 +324,18 @@ footer {
     }
     
     .next-event {
-        width: 70%;
-        height: 80%;
+        width: 70vw;
+        height: 60%;
+        align-self: center;
+        justify-self: center;
+    }
+
+    .slogan {
+        align-self: flex-start;
     }
 
     #join-here {
-        width: 100%;
-        height: 4vh;
+        width: 55vw;
+        height: 30%;
     }
 }
