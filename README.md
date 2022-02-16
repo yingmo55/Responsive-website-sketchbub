@@ -26,11 +26,16 @@ Photo by <a href="https://unsplash.com/@miracleday?utm_source=unsplash&utm_mediu
 
 
 ## Change Log
-2/6/22:  
+### 2/16/22
++ Adjust font size
++ Adjust grid areas for fullscreen and mobile
++ Add Nav bar icon for mobile
+
+### 2/6/22:  
 + update README.md
 + Adjust the style and some HTML tags
 + Add alt text to images
 + Add `lang` attribute to `<html>` tag
 
-1/2/22:
+### 1/2/22:
 + Finish website
