@@ -27,7 +27,7 @@ h3 {
     font-size: 36px;
 }
 
-p, a {
+p, a, li {
     font-size: 20px;
     font-family: 'Roboto Slab', serif;
     font-weight: 400;
@@ -54,16 +54,22 @@ header > nav {
     height: 100%;
 }
 
-nav > button{
-    padding: 10px;
+nav > ul li{
+    display: inline-flex;
     background-color: white;
 }
 
-nav > button:hover {
+nav a {
+    color: rgb(50, 73, 114);
+    text-decoration: none;
+    padding: 10px;
+}
+
+nav a:hover {
     background-color: lightgray;
 }
 
-nav > button:active {
+nav a:active {
     background-color: grey;
 }
 
